@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - KreaterGFX</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('asxw.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #e6f1ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            opacity: 1;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #1e3a8a, #2563eb);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #e6f1ff;
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #e6f1ff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s, transform 0.2s;
+        }
+        nav ul li a:hover {
+            color: #60a5fa;
+            transform: scale(1.1);
+        }
+        .portfolio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+            text-align: center;
+        }
+        .thumbnail {
+            width: 80%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .thumbnail:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        }
+        .thumbnail img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e3a8a;
+            color: #e6f1ff;
+            margin-top: 50px;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>protfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="protfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="order.html">Order Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="portfolio">
+        <div class="thumbnail"><img src="thumbnail1.jpg" alt="Thumbnail 1"></div>
+        <div class="thumbnail"><img src="thumbnail2.jpg" alt="Thumbnail 2"></div>
+        <div class="thumbnail"><img src="thumbnail3.jpg" alt="Thumbnail 3"></div>
+        <div class="thumbnail"><img src="thumbnail4.jpg" alt="Thumbnail 4"></div>
+        <div class="thumbnail"><img src="cowthumb.jpg" alt="Thumbnail 5"></div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 KreaterGFX. Powered by Codium8x.</p>
+    </footer>
+</body>
+</html>

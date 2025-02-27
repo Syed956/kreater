@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now - KreaterGFX</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #1e3a8a, #2563eb);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .banner {
+            width: 100%;
+            height: 200px;
+            background: url('banner.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .order-form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .order-form input, .order-form textarea, .order-form select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .order-form button {
+            background: #2563eb;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .order-form button:hover {
+            background: #1e3a8a;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    <h1>Order Your Custom Thumbnail</h1>
+    <div class="order-form">
+        <form action="submit_order.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required pattern="[0-9]{10,15}" title="Enter a valid phone number (10-15 digits)">
+            <select name="design_type" required>
+                <option value="">Select Design Type</option>
+                <option value="thumbnail">Thumbnail</option>
+                <option value="banner">Banner</option>
+                <option value="logo">Logo</option>
+            </select>
+            <textarea name="details" placeholder="Describe your request..." required></textarea>
+            <input type="file" name="reference_file" accept="image/*">
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+</body>
+</html>

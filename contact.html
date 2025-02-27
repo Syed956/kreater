@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - KreaterGFX</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #0a192f;
+            color: #e6f1ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            opacity: 1;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #1e3a8a, #2563eb);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #e6f1ff;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #e6f1ff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #60a5fa;
+        }
+        #contact {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            opacity: 1;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .input-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, textarea, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            background: rgba(255, 255, 255, 0.1);
+            color: #e6f1ff;
+            transition: 0.3s;
+            outline: none;
+        }
+        input:focus, textarea:focus {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+        }
+        button {
+            background: #2563eb;
+            border: none;
+            padding: 15px 30px;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #60a5fa;
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e3a8a;
+            color: #e6f1ff;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="image5.png" alt="KreaterGFX Logo" style="height: 80px;">
+        <h1>Contact Me</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="protfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="order.html">Order Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="contact">
+        <h2>Let's Work Together</h2>
+        <p>Have a project in mind? Fill out the form below and I'll get back to you as soon as possible.</p>
+        <form>
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Enter subject" required>
+            </div>
+            <div class="input-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" placeholder="Describe your project or inquiry" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 KreaterGFX. Powered by Codium8x.</p>
+    </footer>
+</body>
+</html>
